@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "simple-quarkus-web-app"
+  description: "simple quarkus web app to demo backstage"
+  annotations:
+    argocd/app-name: simple-quarkus-web-app-dev
+    backstage.io/kubernetes-id: simple-quarkus-web-app
+    github.com/project-slug: rhsummit-backstage-fqfvc/backstage-quarkus-web-app-hpgrahsl
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - java
+    - quarkus
+  links:
+    - url: https://devspaces.apps.cluster-fqfvc.fqfvc.sandbox557.opentlc.com/#https://github.com/rhsummit-backstage-fqfvc/backstage-quarkus-web-app-hpgrahsl?che-editor=che-incubator/che-code/insiders&devfilePath=.devfile-vscode.yaml
+      title: CodeReady Workspaces (VS Code)
+      icon: web
+    - url: https://devspaces.apps.cluster-fqfvc.fqfvc.sandbox557.opentlc.com/#https://github.com/rhsummit-backstage-fqfvc/backstage-quarkus-web-app-hpgrahsl?che-editor=che-incubator/che-idea/next&devfilePath=.devfile-intellij.yaml
+      title: CodeReady Workspaces (JetBrains IntelliJ)
+      icon: web
+spec:
+  type: service
+  lifecycle: production
+  owner: "rhsummit-backstage-fqfvc"
